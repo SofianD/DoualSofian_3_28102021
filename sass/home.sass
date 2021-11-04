@@ -1,5 +1,7 @@
 @import styles.sass
 
+$padding: 20px
+
 h1
   font-size: 18px
 
@@ -29,7 +31,7 @@ h1
     cursor: pointer
 
 #fonctionnement
-  padding: 20px
+  padding: $padding
 
   #steps
     display: flex
@@ -44,7 +46,7 @@ h1
     margin: 15px 0px 15px 10px
     min-height: 60px
     border-radius: 15px
-    box-shadow: 0 4px 12px #d5d5d5
+    box-shadow: $shadow
 
     &:nth-child(3)
       background-color: #9256dc51
@@ -64,11 +66,86 @@ h1
         font-size: 12px
 
     div:nth-child(2)
-      width: 35px
+      width: 30px
       color: #5c5c5c
       p
         text-align: center
     
     div:nth-child(3)
-      padding-left: 5px
+      padding-left: 10px
       font-weight: bold
+
+main
+  padding: $padding
+  background-color: $grey
+
+  #display
+    display: grid
+    grid-auto-columns: repat(1, 1fr)
+    grid-gap: 15px
+    grid-auto-rows: minmax(200px, auto)
+    margin: 25px 0
+
+    a
+      text-decoration: none
+      color: inherit
+    
+    .card
+      border-radius: 15px
+      box-shadow: $shadow
+      // position: relative
+
+      .card-bg
+        background-size: cover
+        background-position: center
+        height: 140px
+        border-radius: 15px 15px 0 0
+
+
+      &:nth-child(1) .card-bg
+        background-image: $image-lapalettedugout
+      
+      &:nth-child(2) .card-bg
+        background-image: $image-lanoteenchantee
+
+      &:nth-child(3) .card-bg
+        background-image: $image-alafrancaise
+
+      &:nth-child(4) .card-bg
+        background-image: $image-ledelicedessens
+
+.card-info
+  // position: absolute
+  // bottom: 0
+  // left: 0
+  // right: 0
+  min-height: 60px
+  background-color: white
+  border-radius: 0 0 15px 15px
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: center
+  padding: 0 10px
+
+  p
+    margin: 0
+    &:nth-child(1)
+      font-weight: bold
+
+  .card-icon
+    width: 30px
+    i
+      color: #5c5c5c
+      font-size: 22px
+      cursor: pointer
+      transition: .5s
+      &:hover
+        background: rgb(147,86,220)
+        background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+        background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+        background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
+        background-clip: text
+        -webkit-background-clip: text
+        color: transparent
