@@ -27,3 +27,48 @@ h1
     background-color: #9356DC
     color: white
     cursor: pointer
+
+#fonctionnement
+  padding: 20px
+
+  #steps
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+  
+  .step
+    background-color: #f2f2f2
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+    margin: 15px 0px 15px 10px
+    min-height: 60px
+    border-radius: 15px
+    box-shadow: 0 4px 12px #d5d5d5
+
+    &:nth-child(3)
+      background-color: #9256dc51
+      i
+        color: $purple
+
+    div:nth-child(1)
+      width: 20px
+      height: 20px
+      border-radius: 100%
+      background-color: $purple
+      display: flex
+      transform: translateX(-50%)
+      color: white
+      p
+        margin: auto
+        font-size: 12px
+
+    div:nth-child(2)
+      width: 35px
+      color: #5c5c5c
+      p
+        text-align: center
+    
+    div:nth-child(3)
+      padding-left: 5px
+      font-weight: bold
