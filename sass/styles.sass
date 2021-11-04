@@ -18,6 +18,9 @@ $image-ledelicedessens: url('../assets/images/restaurants/louis-hansel-shotsoflo
 
 $shadow: 0 4px 12px #d1d1d1
 
+
+$padding: 20px
+
 *
   font-family: 'Roboto'
   font-size: 15px
@@ -25,9 +28,37 @@ $shadow: 0 4px 12px #d1d1d1
 body
   margin: 0
 
+a
+  text-decoration: none
+  color: inherit
+
 header
   display: flex
   min-height: 60px
   img
     max-width: 150px
     margin: auto
+
+footer
+  color: white
+  background-color: #333333
+  padding: $padding
+
+  div > img
+    height: 20px
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%)
+
+  div:nth-child(2)
+    display: flex
+    flex-direction: column
+
+    a
+      margin: 5px 0
+    
+    i
+      width: 20px
+
+    .fa-hands-helping
+      // width: 20px
+      transform: scaleX(0.66)
+      transform-origin: left
