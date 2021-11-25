@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/font/Roboto/Roboto-Regular.ttf");
+}
+* {
+  font-family: "Roboto";
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  min-height: 60px;
+  background-color: white;
+}
+header img {
+  max-width: 150px;
+  margin: auto;
+}
+
+footer {
+  color: white;
+  background-color: #333333;
+  padding: 20px;
+}
+footer div > img {
+  height: 20px;
+  filter: invert(100%);
+}
+footer div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+footer div:nth-child(2) a {
+  margin: 5px 0;
+}
+footer div:nth-child(2) i {
+  width: 20px;
+}
+footer div:nth-child(2) .fa-hands-helping {
+  transform: scaleX(0.66);
+  transform-origin: left;
+}
+
+.purple-btn {
+  margin: 18.72px auto;
+  width: fit-content;
+  min-width: 150px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #bdbdbd;
+  background: #9356dc;
+  background: -moz-linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: -webkit-linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+#explorer {
+  text-align: center;
+  background-color: #F2F2F2;
+}
+#explorer #location {
+  box-shadow: inset 0 7px 3px -5px #878787d2;
+  background-color: #dfdfdf9a;
+  padding: 3px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#explorer #location i {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+#explorer #location p {
+  margin-left: 10px;
+}
+#explorer #visit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+#explorer #visit h1 {
+  font-size: 26px;
+  margin: 20px 39px;
+}
+#explorer #visit p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#fonctionnement {
+  padding: 20px;
+}
+#fonctionnement #steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#fonctionnement .step {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 15px 0px 15px 10px;
+  min-height: 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px #bdbdbd;
+}
+#fonctionnement .step:nth-child(3) {
+  background-color: #9256dc51;
+}
+#fonctionnement .step:nth-child(3) i {
+  color: #9356DC;
+}
+#fonctionnement .step div:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #9356DC;
+  display: flex;
+  transform: translateX(-50%);
+  color: white;
+}
+#fonctionnement .step div:nth-child(1) p {
+  margin: auto;
+  font-size: 12px;
+}
+#fonctionnement .step div:nth-child(2) {
+  width: 30px;
+  color: #5c5c5c;
+}
+#fonctionnement .step div:nth-child(2) p {
+  text-align: center;
+}
+#fonctionnement .step div:nth-child(3) {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  background-color: #F2F2F2;
+}
+main #display {
+  display: grid;
+  grid-auto-columns: repat(1, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(250px, auto);
+  margin: 25px 0;
+}
+main #display a {
+  width: calc(100% - 50px);
+}
+main #display .card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px #bdbdbd;
+}
+main #display .card:nth-child(1) .card-bg {
+  background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+main #display .card:nth-child(2) .card-bg {
+  background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+main #display .card:nth-child(3) .card-bg {
+  background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+main #display .card:nth-child(4) .card-bg {
+  background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+main #display .card .card-bg {
+  background-size: cover;
+  background-position: center;
+  height: 190px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-info {
+  min-height: 60px;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.card-info p {
+  margin: 0;
+}
+.card-info p:nth-child(1) {
+  font-weight: bold;
+}
+.card-info .card-icon {
+  width: 30px;
+}
+.card-info .card-icon:hover .fas {
+  display: block;
+}
+.card-info .card-icon:hover .far {
+  display: none;
+}
+.card-info .card-icon .fas {
+  display: none;
+}
+.card-info .card-icon i {
+  color: #5c5c5c;
+  font-size: 22px;
+  cursor: pointer;
+}
+.card-info .card-icon i:hover {
+  background: #9356dc;
+  background: -moz-linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
+  background: -webkit-linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
+  background: linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*# sourceMappingURL=home.css.map */

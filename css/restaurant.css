@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/font/Roboto/Roboto-Regular.ttf");
+}
+* {
+  font-family: "Roboto";
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  min-height: 60px;
+  background-color: white;
+}
+header img {
+  max-width: 150px;
+  margin: auto;
+}
+
+footer {
+  color: white;
+  background-color: #333333;
+  padding: 20px;
+}
+footer div > img {
+  height: 20px;
+  filter: invert(100%);
+}
+footer div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+footer div:nth-child(2) a {
+  margin: 5px 0;
+}
+footer div:nth-child(2) i {
+  width: 20px;
+}
+footer div:nth-child(2) .fa-hands-helping {
+  transform: scaleX(0.66);
+  transform-origin: left;
+}
+
+.purple-btn {
+  margin: 18.72px auto;
+  width: fit-content;
+  min-width: 150px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #bdbdbd;
+  background: #9356dc;
+  background: -moz-linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: -webkit-linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  font-size: 13px;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../assets/font/Shrikhand/Shrikhand-Regular.ttf");
+}
+#back {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: fit-content;
+  height: fit-content;
+}
+#back i {
+  font-size: 18px;
+}
+
+#alafrancaise {
+  background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+#lanoteenchantee {
+  background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+#lapalettedugout {
+  background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+#ledelicedessens {
+  background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.set-bg {
+  background-size: 115%;
+  background-position: top;
+}
+
+main {
+  margin-top: 160px;
+  min-height: 500px;
+  background-color: #F2F2F2;
+  border-radius: 40px 40px 0 0;
+  padding: 10px 20px;
+}
+main > div:nth-child(1) {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main > div:nth-child(1) h1 {
+  font-family: Shrikhand;
+  letter-spacing: 1px;
+  font-size: 23px;
+  margin-left: 7px;
+}
+main > div:nth-child(1) i {
+  color: #5c5c5c;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+main > div:nth-child(1) i:hover {
+  background: #9356dc;
+  background: -moz-linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
+  background: -webkit-linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
+  background: linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 1000;
+}
+main > div:nth-child(2) {
+  display: grid;
+  grid-auto-columns: repat(1, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(200px, auto);
+}
+main > div:nth-child(2) h2 {
+  font-weight: lighter;
+}
+
+.section-menu {
+  max-width: calc(100vw - 40px);
+}
+.section-menu h2 {
+  margin-bottom: 5px;
+  margin-left: 7px;
+  font-size: 16px;
+}
+
+.list-menu {
+  display: flex;
+  flex-direction: column;
+}
+.list-menu .card {
+  background-color: white;
+  box-shadow: 0 4px 12px #bdbdbd;
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 60px;
+  margin: 7px 0;
+}
+.list-menu .card .card-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  min-height: 60px;
+  border-radius: 15px;
+  width: calc(100% + 60px);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.list-menu .card .card-flex .card-title {
+  padding: 10px 13px;
+  margin-right: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: calc(100% - 143px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list-menu .card .card-flex .card-title p {
+  margin: 0;
+}
+.list-menu .card .card-flex .card-title p:nth-child(1) {
+  font-weight: bold;
+}
+.list-menu .card .card-flex .card-title p:nth-child(2) {
+  font-size: 14px;
+}
+.list-menu .card .card-flex .card-price {
+  width: 60px;
+  text-align: center;
+  display: flex;
+}
+.list-menu .card .card-flex .card-price p {
+  margin: auto;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.list-menu .card .card-flex .card-selected {
+  background-color: #99E2D0;
+  width: 60px;
+  display: flex;
+}
+.list-menu .card .card-flex .card-selected > * {
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  transform-origin: center;
+}
+.list-menu .card .card-flex:hover {
+  width: 100%;
+}
+
+.card-flex:hover .card-selected i {
+  animation: rotateCheck 0.4s ease-in forwards;
+}
+
+.card-flex:hover .card-title {
+  width: calc(100% - 166px);
+}
+
+#btn-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.green-bar {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-bottom: 12px;
+  margin-left: 7px;
+}
+
+@keyframes rotateCheck {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=restaurant.css.map */

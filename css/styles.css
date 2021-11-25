@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/font/Roboto/Roboto-Regular.ttf");
+}
+* {
+  font-family: "Roboto";
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  min-height: 60px;
+  background-color: white;
+}
+header img {
+  max-width: 150px;
+  margin: auto;
+}
+
+footer {
+  color: white;
+  background-color: #333333;
+  padding: 20px;
+}
+footer div > img {
+  height: 20px;
+  filter: invert(100%);
+}
+footer div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+footer div:nth-child(2) a {
+  margin: 5px 0;
+}
+footer div:nth-child(2) i {
+  width: 20px;
+}
+footer div:nth-child(2) .fa-hands-helping {
+  transform: scaleX(0.66);
+  transform-origin: left;
+}
+
+.purple-btn {
+  margin: 18.72px auto;
+  width: fit-content;
+  min-width: 150px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #bdbdbd;
+  background: #9356dc;
+  background: -moz-linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: -webkit-linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=styles.css.map */
