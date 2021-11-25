@@ -27,6 +27,7 @@ h1
     background-color: #9356DC
     color: white
     cursor: pointer
+    box-shadow: $shadow
 
 #fonctionnement
   padding: $padding
@@ -131,11 +132,19 @@ main
 
   .card-icon
     width: 30px
+    &:hover
+      .fas
+        display: block
+      .far
+        display: none
+    .fas 
+      display: none
+    
     i
       color: #5c5c5c
       font-size: 22px
       cursor: pointer
-      transition: .5s
+      // transition: .1s
       &:hover
         background: rgb(147,86,220)
         background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)

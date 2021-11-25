@@ -1,1 +1,170 @@
 @import styles.sass
+
+@font-face
+  font-family: 'Shrikhand'
+  src: url('../assets/font/Shrikhand/Shrikhand-Regular.ttf')
+
+#back
+  position: absolute
+  top: 20px
+  left: 30px
+  width: fit-content
+  height: fit-content
+  i
+    font-size: 18px
+
+#alafrancaise
+  background-image: url($image-alafrancaise)
+
+#lanoteenchantee
+  background-image: url($image-lanoteenchantee)
+
+#lapalettedugout
+  background-image: url($image-lapalettedugout)
+
+#ledelicedessens
+  background-image: url($image-ledelicedessens)
+
+.set-bg
+  background-size: 115%
+  background-position: top
+
+main
+  margin-top: 160px
+  min-height: 500px
+  background-color: $grey
+  border-radius: 40px 40px 0 0
+  padding: 10px 20px
+  // TITLE
+  > div:nth-child(1)
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: center
+    .fas
+      display: none
+    h1
+      font-family: Shrikhand
+      letter-spacing: 1px
+      font-size: 23px
+    i
+      color: #5c5c5c
+      font-size: 20px
+      margin-right: 10px
+      cursor: pointer
+      transition: .5s
+      &:hover
+        background: rgb(147,86,220)
+        background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+        background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+        background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
+        background-clip: text
+        -webkit-background-clip: text
+        color: transparent
+        .fas
+          display: block
+        .far
+          display: none
+  // MENU
+  > div:nth-child(2)
+    display: grid
+    grid-auto-columns: repat(1, 1fr)
+    grid-gap: 20px
+    grid-auto-rows: minmax(200px, auto)
+    h2
+      font-weight: lighter
+
+.section-menu
+  max-width: calc(100vw - 40px)
+
+
+.list-menu
+  display: flex
+  flex-direction: column
+
+  .card
+    background-color: white
+    box-shadow: $shadow
+    border-radius: 15px
+    overflow: hidden
+    min-height: 60px
+    margin: 5px 0
+
+    .card-flex
+      display: flex
+      flex-wrap: nowrap
+      min-height: 60px
+      border-radius: 15px
+      width: calc(100% + 60px)
+      transition: .5s
+
+      .card-title
+        padding: 10px
+        margin-right: auto
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        width: calc( 100% - 140px )
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        
+        p
+          margin: 0
+
+          &:nth-child(1)
+            font-weight: bold
+
+      .card-price
+        width: 60px
+        text-align: center
+        display: flex
+
+        p
+              margin: auto
+              margin-bottom: 10px
+              font-weight: bold
+
+      .card-selected
+        background-color: $blue
+        width: 60px
+        display: flex
+        // border-radius: 0 15px 15px 0
+        > *
+          margin: auto
+          color: white
+          font-size: 20px
+          transform-origin: center
+
+      &:hover
+        width: 100%
+          
+.card-flex:hover .card-selected i
+  animation: rotateCheck .4s ease-in forwards
+
+.card-flex:hover .card-title
+  width: calc( 100% - 160px )
+
+
+// =keyframes($name)
+//   @-webkit-keyframes #{$name}
+//     @content
+//   @-moz-keyframes #{$name}
+//     @content
+//   @-ms-keyframes #{$name}
+//     @content
+//   @keyframes #{$name}
+//     @content
+
+// +keyframes(rotateCheck)
+//   0%
+//     transform: rotate(0)
+//   100%
+//     transform: rotate(360)
+
+@keyframes rotateCheck
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
