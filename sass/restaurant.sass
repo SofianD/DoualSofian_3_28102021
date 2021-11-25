@@ -41,12 +41,12 @@ main
     flex-wrap: nowrap
     justify-content: space-between
     align-items: center
-    .fas
-      display: none
     h1
       font-family: Shrikhand
       letter-spacing: 1px
       font-size: 23px
+      margin-left: 7px
+
     i
       color: #5c5c5c
       font-size: 20px
@@ -62,10 +62,7 @@ main
         background-clip: text
         -webkit-background-clip: text
         color: transparent
-        .fas
-          display: block
-        .far
-          display: none
+        font-weight: 1000
   // MENU
   > div:nth-child(2)
     display: grid
@@ -77,6 +74,10 @@ main
 
 .section-menu
   max-width: calc(100vw - 40px)
+  h2
+    margin-bottom: 5px
+    margin-left: 7px
+    font-size: 16px
 
 
 .list-menu
@@ -89,8 +90,8 @@ main
     border-radius: 15px
     overflow: hidden
     min-height: 60px
-    margin: 5px 0
-
+    margin: 7px 0
+    
     .card-flex
       display: flex
       flex-wrap: nowrap
@@ -98,14 +99,16 @@ main
       border-radius: 15px
       width: calc(100% + 60px)
       transition: .5s
+      cursor: pointer
+
 
       .card-title
-        padding: 10px
+        padding: 10px 13px
         margin-right: auto
         text-overflow: ellipsis
         overflow: hidden
         white-space: nowrap
-        width: calc( 100% - 140px )
+        width: calc( 100% - 143px )
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -115,6 +118,8 @@ main
 
           &:nth-child(1)
             font-weight: bold
+          &:nth-child(2)
+            font-size: 14px
 
       .card-price
         width: 60px
@@ -125,6 +130,7 @@ main
               margin: auto
               margin-bottom: 10px
               font-weight: bold
+              font-size: 14px
 
       .card-selected
         background-color: $blue
@@ -144,8 +150,18 @@ main
   animation: rotateCheck .4s ease-in forwards
 
 .card-flex:hover .card-title
-  width: calc( 100% - 160px )
+  width: calc( 100% - 166px )
 
+#btn-container
+  margin: 20px 0
+  text-align: center
+
+.green-bar
+  width: 40px
+  height: 3px
+  background-color: $blue
+  margin-bottom: 12px
+  margin-left: 7px
 
 // =keyframes($name)
 //   @-webkit-keyframes #{$name}
