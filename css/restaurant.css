@@ -166,6 +166,8 @@ main > div:nth-child(2) h2 {
   flex-direction: column;
 }
 .list-menu .card {
+  transform: translate(0, 20px);
+  opacity: 0;
   background-color: white;
   box-shadow: 0 4px 12px #bdbdbd;
   border-radius: 15px;
@@ -256,6 +258,61 @@ main > div:nth-child(2) h2 {
   100% {
     transform: rotate(360deg);
   }
+}
+@keyframes fondu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.list-menu .card:nth-child(1) {
+  animation: fondu 0.3s ease-out 100ms forwards, slide 0.7s ease-out 100ms forwards;
+}
+
+.list-menu .card:nth-child(2) {
+  animation: fondu 0.3s ease-out 200ms forwards, slide 0.7s ease-out 200ms forwards;
+}
+
+.list-menu .card:nth-child(3) {
+  animation: fondu 0.3s ease-out 300ms forwards, slide 0.7s ease-out 300ms forwards;
+}
+
+.list-menu .card:nth-child(4) {
+  animation: fondu 0.3s ease-out 400ms forwards, slide 0.7s ease-out 400ms forwards;
+}
+
+.list-menu .card:nth-child(5) {
+  animation: fondu 0.3s ease-out 500ms forwards, slide 0.7s ease-out 500ms forwards;
+}
+
+.list-menu .card:nth-child(6) {
+  animation: fondu 0.3s ease-out 600ms forwards, slide 0.7s ease-out 600ms forwards;
+}
+
+.list-menu .card:nth-child(7) {
+  animation: fondu 0.3s ease-out 700ms forwards, slide 0.7s ease-out 700ms forwards;
+}
+
+.list-menu .card:nth-child(8) {
+  animation: fondu 0.3s ease-out 800ms forwards, slide 0.7s ease-out 800ms forwards;
+}
+
+.list-menu .card:nth-child(9) {
+  animation: fondu 0.3s ease-out 900ms forwards, slide 0.7s ease-out 900ms forwards;
+}
+
+.list-menu .card:nth-child(10) {
+  animation: fondu 0.3s ease-out 1000ms forwards, slide 0.7s ease-out 1000ms forwards;
 }
 
 /*# sourceMappingURL=restaurant.css.map */
