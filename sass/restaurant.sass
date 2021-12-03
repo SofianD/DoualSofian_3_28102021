@@ -85,6 +85,8 @@ main
   flex-direction: column
 
   .card
+    transform: translate(0, 20px)
+    opacity: 0
     background-color: white
     box-shadow: $shadow
     border-radius: 15px
@@ -184,3 +186,19 @@ main
     transform: rotate(0deg)
   100%
     transform: rotate(360deg)
+
+@keyframes fondu
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes slide
+  0%
+    transform: translate(0, 20px)
+  100%
+    transform: translate(0, 0)
+
+@for $i from 1 through 10
+  .list-menu .card:nth-child(#{$i})
+    animation: fondu .3s ease-out #{$i}00ms forwards, slide .7s ease-out #{$i}00ms forwards
