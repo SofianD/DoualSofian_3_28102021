@@ -69,6 +69,16 @@ footer div:nth-child(2) .fa-hands-helping {
   font-size: 13px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  footer {
+    text-align: center;
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url("../assets/font/Shrikhand/Shrikhand-Regular.ttf");
@@ -107,7 +117,7 @@ footer div:nth-child(2) .fa-hands-helping {
 
 main {
   margin-top: 160px;
-  min-height: 500px;
+  min-height: 550px;
   background-color: #F2F2F2;
   border-radius: 40px 40px 0 0;
   padding: 10px 20px;
@@ -146,7 +156,7 @@ main > div:nth-child(2) h2 {
 }
 
 .section-menu {
-  max-width: calc(100vw - 40px);
+  margin-bottom: 45px;
 }
 .section-menu h2 {
   margin-bottom: 5px;
@@ -171,14 +181,14 @@ main > div:nth-child(2) h2 {
 .list-menu .card .card-flex {
   display: flex;
   flex-wrap: nowrap;
-  min-height: 60px;
+  min-height: 65px;
   border-radius: 15px;
   width: calc(100% + 60px);
   transition: 0.5s;
   cursor: pointer;
 }
 .list-menu .card .card-flex .card-title {
-  padding: 10px 0 10px 10px;
+  padding: 11px 0 11px 10px;
   margin-right: auto;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -196,9 +206,7 @@ main > div:nth-child(2) h2 {
 }
 .list-menu .card .card-flex .card-title p:nth-child(1) {
   font-weight: bold;
-}
-.list-menu .card .card-flex .card-title p:nth-child(2) {
-  font-size: 14px;
+  font-size: 17px;
 }
 .list-menu .card .card-flex .card-price {
   width: 60px;
@@ -311,6 +319,48 @@ main > div:nth-child(2) h2 {
 
 .list-menu .card:nth-child(10) {
   animation: fondu 0.3s ease-out 1000ms forwards, slide 0.7s ease-out 1000ms forwards;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  main {
+    padding: 10px 100px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body {
+    background-attachment: fixed;
+  }
+
+  main {
+    margin: auto;
+    margin-top: 150px;
+    width: calc(100vw - 40px - 200px);
+    box-shadow: 0px -10px 30px #000000c2;
+  }
+  main > div:nth-child(1) {
+    justify-content: center;
+  }
+  main > div:nth-child(1) h1 {
+    font-size: 50px;
+  }
+  main > div:nth-child(1) i {
+    margin-left: 40px;
+    font-size: 40px;
+  }
+  main > div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  .section-menu {
+    max-width: calc(30vw - 70px);
+    width: calc(30vw - 70px);
+  }
+
+  #btn-container {
+    margin: 50px 0;
+  }
 }
 
 /*# sourceMappingURL=restaurant.css.map */
