@@ -181,14 +181,14 @@ main > div:nth-child(2) h2 {
 .list-menu .card .card-flex {
   display: flex;
   flex-wrap: nowrap;
-  min-height: 60px;
+  min-height: 65px;
   border-radius: 15px;
   width: calc(100% + 60px);
   transition: 0.5s;
   cursor: pointer;
 }
 .list-menu .card .card-flex .card-title {
-  padding: 10px 0 10px 10px;
+  padding: 11px 0 11px 10px;
   margin-right: auto;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -206,9 +206,7 @@ main > div:nth-child(2) h2 {
 }
 .list-menu .card .card-flex .card-title p:nth-child(1) {
   font-weight: bold;
-}
-.list-menu .card .card-flex .card-title p:nth-child(2) {
-  font-size: 14px;
+  font-size: 17px;
 }
 .list-menu .card .card-flex .card-price {
   width: 60px;
@@ -357,6 +355,7 @@ main > div:nth-child(2) h2 {
 
   .section-menu {
     max-width: calc(30vw - 70px);
+    width: calc(30vw - 70px);
   }
 
   #btn-container {
