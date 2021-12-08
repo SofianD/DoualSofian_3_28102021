@@ -129,7 +129,6 @@ main > div:nth-child(1) i {
   font-size: 20px;
   margin-right: 10px;
   cursor: pointer;
-  transition: 0.5s;
 }
 main > div:nth-child(1) i:hover {
   background: #9356dc;
