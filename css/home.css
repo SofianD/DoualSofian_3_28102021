@@ -248,7 +248,7 @@ main {
   font-weight: 1000;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
+@media screen and (min-width: 768px) and (max-width: 1100px) {
   #display {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -261,17 +261,18 @@ main {
 @media screen and (min-width: 1100px) {
   #display {
     grid-template-columns: repeat(4, 1fr);
+    margin: 70px 0;
   }
 
   #steps {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    margin-top: 100px;
+    margin-top: 70px;
   }
 
   #fonctionnement {
-    height: 350px;
+    height: 300px;
   }
 }
 
