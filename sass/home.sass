@@ -134,20 +134,15 @@ main
       font-weight: bold
 
   .card-icon
-    width: 30px
-    &:hover
-      .fas
-        display: block
-      .far
-        display: none
-    .fas 
-      display: none
-    
+    width: 22px
+    height: 22px
+
     i
       color: #5c5c5c
       font-size: 22px
       cursor: pointer
-      // transition: .1s
+      position: absolute
+      z-index: 5000
       &:hover
         background: rgb(147,86,220)
         background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
@@ -157,3 +152,4 @@ main
         background-clip: text
         -webkit-background-clip: text
         color: transparent
+        font-weight: 1000

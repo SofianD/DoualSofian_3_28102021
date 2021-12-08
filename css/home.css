@@ -210,21 +210,15 @@ main #display .card .card-bg {
   font-weight: bold;
 }
 .card-info .card-icon {
-  width: 30px;
-}
-.card-info .card-icon:hover .fas {
-  display: block;
-}
-.card-info .card-icon:hover .far {
-  display: none;
-}
-.card-info .card-icon .fas {
-  display: none;
+  width: 22px;
+  height: 22px;
 }
 .card-info .card-icon i {
   color: #5c5c5c;
   font-size: 22px;
   cursor: pointer;
+  position: absolute;
+  z-index: 5000;
 }
 .card-info .card-icon i:hover {
   background: #9356dc;
@@ -235,6 +229,7 @@ main #display .card .card-bg {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: 1000;
 }
 
 /*# sourceMappingURL=home.css.map */
