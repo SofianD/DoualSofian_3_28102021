@@ -65,10 +65,6 @@ main
         font-weight: 1000
   // MENU
   > div:nth-child(2)
-    display: grid
-    grid-auto-columns: repat(1, 1fr)
-    grid-gap: 20px
-    grid-auto-rows: minmax(200px, auto)
     h2
       font-weight: lighter
 
@@ -105,19 +101,21 @@ main
 
 
       .card-title
-        padding: 10px 13px
+        padding: 10px 0 10px 10px
         margin-right: auto
         text-overflow: ellipsis
         overflow: hidden
         white-space: nowrap
-        width: calc( 100% - 143px )
+        width: calc( 100% - 110px )
         display: flex
         flex-direction: column
         justify-content: space-between
         
         p
           margin: 0
-
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
           &:nth-child(1)
             font-weight: bold
           &:nth-child(2)
@@ -125,6 +123,7 @@ main
 
       .card-price
         width: 60px
+        min-width: 60px
         text-align: center
         display: flex
 
@@ -137,6 +136,7 @@ main
       .card-selected
         background-color: $blue
         width: 60px
+        min-width: 60px
         display: flex
         // border-radius: 0 15px 15px 0
         > *
@@ -152,7 +152,7 @@ main
   animation: rotateCheck .4s ease-in forwards
 
 .card-flex:hover .card-title
-  width: calc( 100% - 166px )
+  width: calc( 100% - 140px )
 
 #btn-container
   margin: 20px 0
@@ -164,22 +164,6 @@ main
   background-color: $blue
   margin-bottom: 12px
   margin-left: 7px
-
-// =keyframes($name)
-//   @-webkit-keyframes #{$name}
-//     @content
-//   @-moz-keyframes #{$name}
-//     @content
-//   @-ms-keyframes #{$name}
-//     @content
-//   @keyframes #{$name}
-//     @content
-
-// +keyframes(rotateCheck)
-//   0%
-//     transform: rotate(0)
-//   100%
-//     transform: rotate(360)
 
 @keyframes rotateCheck
   0%

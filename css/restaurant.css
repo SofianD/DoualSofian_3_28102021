@@ -142,12 +142,6 @@ main > div:nth-child(1) i:hover {
   color: transparent;
   font-weight: 1000;
 }
-main > div:nth-child(2) {
-  display: grid;
-  grid-auto-columns: repat(1, 1fr);
-  grid-gap: 20px;
-  grid-auto-rows: minmax(200px, auto);
-}
 main > div:nth-child(2) h2 {
   font-weight: lighter;
 }
@@ -185,18 +179,21 @@ main > div:nth-child(2) h2 {
   cursor: pointer;
 }
 .list-menu .card .card-flex .card-title {
-  padding: 10px 13px;
+  padding: 10px 0 10px 10px;
   margin-right: auto;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: calc(100% - 143px);
+  width: calc(100% - 110px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .list-menu .card .card-flex .card-title p {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .list-menu .card .card-flex .card-title p:nth-child(1) {
   font-weight: bold;
@@ -206,6 +203,7 @@ main > div:nth-child(2) h2 {
 }
 .list-menu .card .card-flex .card-price {
   width: 60px;
+  min-width: 60px;
   text-align: center;
   display: flex;
 }
@@ -218,6 +216,7 @@ main > div:nth-child(2) h2 {
 .list-menu .card .card-flex .card-selected {
   background-color: #99E2D0;
   width: 60px;
+  min-width: 60px;
   display: flex;
 }
 .list-menu .card .card-flex .card-selected > * {
@@ -235,7 +234,7 @@ main > div:nth-child(2) h2 {
 }
 
 .card-flex:hover .card-title {
-  width: calc(100% - 166px);
+  width: calc(100% - 140px);
 }
 
 #btn-container {
