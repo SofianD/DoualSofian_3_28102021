@@ -69,6 +69,16 @@ footer div:nth-child(2) .fa-hands-helping {
   font-size: 13px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  footer {
+    text-align: center;
+  }
+}
 h1 {
   font-size: 18px;
 }
@@ -97,6 +107,7 @@ h1 {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 20px;
+  min-height: 250px;
 }
 #explorer #visit h1 {
   font-size: 26px;
@@ -124,6 +135,10 @@ h1 {
   min-height: 60px;
   border-radius: 15px;
   box-shadow: 0 4px 12px #bdbdbd;
+  transition: 0.2s;
+}
+#fonctionnement .step:hover {
+  transform: scale(1.03);
 }
 #fonctionnement .step:nth-child(3) {
   background-color: #9256dc51;
@@ -160,33 +175,34 @@ main {
   padding: 20px;
   background-color: #F2F2F2;
 }
-main #display {
+
+#display {
   display: grid;
-  grid-auto-columns: repat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   grid-auto-rows: minmax(250px, auto);
   margin: 25px 0;
 }
-main #display a {
+#display a {
   width: calc(100% - 50px);
 }
-main #display .card {
+#display .card {
   border-radius: 15px;
   box-shadow: 0 4px 12px #bdbdbd;
 }
-main #display .card:nth-child(1) .card-bg {
+#display .card:nth-child(1) .card-bg {
   background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
-main #display .card:nth-child(2) .card-bg {
+#display .card:nth-child(2) .card-bg {
   background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
-main #display .card:nth-child(3) .card-bg {
+#display .card:nth-child(3) .card-bg {
   background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
-main #display .card:nth-child(4) .card-bg {
+#display .card:nth-child(4) .card-bg {
   background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
-main #display .card .card-bg {
+#display .card .card-bg {
   background-size: cover;
   background-position: center;
   height: 190px;
@@ -230,6 +246,33 @@ main #display .card .card-bg {
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 1000;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  #display {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #steps {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #display {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #steps {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 100px;
+  }
+
+  #fonctionnement {
+    height: 350px;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

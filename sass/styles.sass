@@ -2,15 +2,21 @@
   font-family: 'Roboto'
   src: url('../assets/font/Roboto/Roboto-Regular.ttf')
 
+// COLOR
 $purple: #9356DC
 $pink: #FF79DA
 $blue: #99E2D0
 $grey: #F2F2F2
 
+// IMAGE
 $image-alafrancaise: '../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg'
 $image-lanoteenchantee: '../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg'
 $image-lapalettedugout: '../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg'
 $image-ledelicedessens: '../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg'
+
+// BREAKPOINTS
+$bp-tablet: 768px
+$bp-desktop: 1100px
 
 $shadow: 0 4px 12px #bdbdbd
 
@@ -76,3 +82,14 @@ footer
   background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
   font-size: 13px
+
+// TABLET
+@media only screen and ( min-width: $bp-tablet )and ( max-width: $bp-desktop )
+  footer
+    text-align: center
+
+
+// DESKTOP
+@media screen and ( min-width: $bp-desktop )
+  footer
+    text-align: center
