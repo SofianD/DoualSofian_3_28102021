@@ -1,0 +1,25 @@
+{
+  "name": "doualsofian_3_28102021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "compile": "node server.js --compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofianD/DoualSofian_3_28102021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofianD/DoualSofian_3_28102021/issues"
+  },
+  "homepage": "https://github.com/SofianD/DoualSofian_3_28102021#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
+}
