@@ -15,8 +15,11 @@ async function compileOnly() {
     if (ext === ".sass") {
       try {
         await fs.promises.mkdir("css", { recursive: true });
+
         const compiled = await sass.compileAsync(join("sass", fileName));
-        await fs.promises.writeFile(join("css", fileName.replace(ext, ".css")), compiled.css);
+
+        const formatedfileName = join("css", fileName.replace(ext, ".css"));
+        await fs.promises.writeFile(formatedfileName, compiled.css);
       } catch (error) {
         console.log(error)
       }
@@ -43,8 +46,11 @@ async function sassCompiler(request, response) {
       if (ext === ".sass") {
         try {
           await fs.promises.mkdir("css", { recursive: true });
+          
           const compiled = await sass.compileAsync(join("sass", fileName));
-          await fs.promises.writeFile(join("css", fileName.replace(ext, ".css")), compiled.css);
+
+          const formatedfileName = join("css", fileName.replace(ext, ".css"));
+          await fs.promises.writeFile(formatedfileName, compiled.css);
         } catch (error) {
           console.log(error)
         }
