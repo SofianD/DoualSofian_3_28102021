@@ -329,6 +329,8 @@ main > div:nth-child(2) h2 {
 @media screen and (min-width: 1100px) {
   body {
     background-attachment: fixed;
+    background-size: cover !important;
+    background-position: bottom !important;
   }
 
   main {
