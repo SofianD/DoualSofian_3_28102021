@@ -6,9 +6,9 @@ const { join, extname } = require('path');
 // IMPORT THIRD PARTY DEP
 const sass = require('sass');
 
-async function compileOnly() {
-  const files = await fs.promises.readdir("sass");
-
+async function compileOnly(targets = undefined) {
+  const files = targets|| await fs.promises.readdir("sass");
+  console.log(files)
   for (const fileName of files) {
     const ext = extname(fileName);
 
@@ -28,13 +28,6 @@ async function compileOnly() {
 
   return;
 }
-
-function runServer() {
-  const server = http.createServer(sassCompiler);
-
-  server.listen(8080);
-  console.log('Server is running 8080');
-};
 
 async function sassCompiler(request, response) {
   if (extname(request.url) === ".html" || request.url === "/") {
@@ -59,12 +52,26 @@ async function sassCompiler(request, response) {
   }
 
   fs.createReadStream(request.url.substring(1) || join('.', 'index.html')).pipe(response);
-
 }
 
-if (process.argv[2] === "--compile") {
-  compileOnly();
+function runServer(port = undefined) {
+  const server = http.createServer(sassCompiler);
+
+  const defaultPort = 8000;
+  server.listen(port || defaultPort);
+
+  console.log(`Server is running ${ port || defaultPort } `);
+};
+
+function main() {
+  if (process.argv[2] === "--compile") {
+    const targets = process.argv.slice(3);
+    compileOnly(targets.length > 0 ? targets.map(fileName => `${fileName}.sass`) : undefined);
+  }
+  else {
+    const port = isNaN(Number(process.argv[2])) ? undefined : Number(process.argv[2]);
+    runServer(port);
+  }
 }
-else {
-  runServer();
-}
+
+main();
