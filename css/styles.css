@@ -67,6 +67,11 @@ footer div:nth-child(2) .fa-hands-helping {
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
   font-size: 13px;
+  transition: 0.3s;
+}
+.purple-btn:hover {
+  box-shadow: 0 4px 20px 5px #808080;
+  filter: brightness(115%);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
