@@ -1,5 +1,8 @@
 @import styles.sass
 
+body
+  animation: noOverflow 12s forwards
+
 #spinner
   position: fixed
   top: 0
@@ -30,21 +33,6 @@
       filter: invert(100%)
       animation: resizeFalseHeaderImg 1s ease-in-out 2s forwards
 
-
-@keyframes resizeFalseHeader
-  0%
-    height: 200px
-  100%
-    height: 60px
-
-@keyframes resizeFalseHeaderImg
-  0%
-    max-width: 300px
-  100%
-    max-width: 150px
-    filter: invert(0%)
-
-
 #loader
   color: white
   font-size: 90px
@@ -60,6 +48,20 @@
   transform: translateZ(0)
   -webkit-animation: duplicate 1.7s infinite ease, turn 1.7s infinite ease
   animation: duplicate 1.7s infinite ease, turn 1.7s infinite ease
+
+@keyframes resizeFalseHeader
+  0%
+    height: 200px
+  100%
+    height: 60px
+
+@keyframes resizeFalseHeaderImg
+  0%
+    max-width: 300px
+  100%
+    max-width: 150px
+    filter: invert(0%)
+
 
 @-webkit-keyframes duplicate
   0%
@@ -294,6 +296,12 @@ main
         -webkit-background-clip: text
         color: transparent
         font-weight: 1000
+
+@keyframes noOverflow
+  0%
+    overflow: hidden
+  100%
+    overflow: auto
 
 // TABLET
 @media screen and ( min-width: $bp-tablet )and ( max-width: $bp-desktop )
