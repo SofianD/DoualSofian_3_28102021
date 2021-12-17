@@ -29,6 +29,43 @@
   background-size: 115%
   background-position: top
 
+.heart-icon
+  width: 22px
+  height: 22px
+
+  i
+    color: #5c5c5c
+    font-size: 22px
+    cursor: pointer
+    position: absolute
+    z-index: 1000
+    transition: .2s ease-out
+
+  .fas
+    opacity: 0
+    background: rgb(147,86,220)
+    background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+    background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+    background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    transform: scale(0)
+
+  &:hover .fas
+    opacity: 1
+    transform: scale(1)
+  &:hover .far
+    background: rgb(147,86,220)
+    background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+    background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+    background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+
 main
   margin-top: 160px
   min-height: 550px
@@ -47,21 +84,6 @@ main
       font-size: 23px
       margin-left: 7px
 
-    i
-      color: #5c5c5c
-      font-size: 20px
-      margin-right: 10px
-      cursor: pointer
-      &:hover
-        background: rgb(147,86,220)
-        background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
-        background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
-        background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
-        background-clip: text
-        -webkit-background-clip: text
-        color: transparent
-        font-weight: 1000
   // MENU
   > div:nth-child(2)
     h2
@@ -215,17 +237,21 @@ main
 
       h1
         font-size: 50px
-      
-      i
-        margin-left: 40px
-        font-size: 30px
-        color: #99E2D0
-
     
     > div:nth-child(2)
       display: flex
       justify-content: space-evenly
       margin-top: 20px
+
+  .heart-icon
+    width: 38px
+    height: 32px
+    margin-left: 40px
+    i
+      font-size: 32px
+      color: #99E2D0
+      width: 38px
+
 
   .section-menu
     max-width: calc(30vw - 70px)
