@@ -298,10 +298,6 @@ h1 {
   min-height: 60px;
   border-radius: 15px;
   box-shadow: 0 4px 12px #bdbdbd;
-  transition: 0.2s;
-}
-#fonctionnement .step:hover {
-  transform: scale(1.03);
 }
 #fonctionnement .step:nth-child(3) {
   background-color: #9256dc51;
@@ -442,16 +438,32 @@ main {
     overflow-x: hidden;
   }
   main h1 {
-    font-size: 30px;
+    font-size: 50px;
     transition: 0.3s ease-out;
-    transform-origin: left;
+    transform-origin: top left;
+    transform: scale(60%);
+    margin-top: 0;
   }
   main:hover > h1 {
-    transform: scale(1.2);
+    transform: scale(1);
+    font-weight: 100;
   }
 
   #display {
     grid-template-columns: repeat(4, 1fr);
+  }
+  #display .card {
+    transition: 0.2s ease-out;
+    transform-origin: bottom;
+    overflow: hidden;
+  }
+  #display .card:hover {
+    transform: scale(105%);
+    box-shadow: 0 10px 20px #3d3d3d;
+  }
+  #display .card:hover .card-bg {
+    transform-origin: bottom;
+    animation: moveBg 9s ease infinite alternate;
   }
 
   #steps {
@@ -462,5 +474,14 @@ main {
 
   #fonctionnement h3 {
     font-size: 28px;
+  }
+
+  @keyframes moveBg {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(110%);
+    }
   }
 }

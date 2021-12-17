@@ -199,9 +199,6 @@ h1
     min-height: 60px
     border-radius: 15px
     box-shadow: $shadow
-    transition: .2s
-    &:hover
-      transform: scale(1.03)
 
     &:nth-child(3)
       background-color: #9256dc51
@@ -334,15 +331,29 @@ main
   main
     overflow-x: hidden
     h1
-      font-size: 30px
+      font-size: 50px
       transition: .3s ease-out
-      transform-origin: left
+      transform-origin: top left
+      transform: scale(60%)
+      margin-top: 0
 
     &:hover > h1
-      transform: scale(1.2)
+      transform: scale(1)
+      font-weight: 100
 
   #display
     grid-template-columns: repeat(4, 1fr)
+    .card
+      transition: .2s ease-out
+      transform-origin: bottom
+      overflow: hidden
+      &:hover
+        transform: scale(105%)
+        box-shadow: 0 10px 20px #3d3d3d
+
+        .card-bg
+          transform-origin: bottom
+          animation: moveBg 9s ease infinite alternate
 
   #steps
     display: grid !important
@@ -351,3 +362,10 @@ main
 
   #fonctionnement h3
     font-size: 28px
+  
+  @keyframes moveBg
+    0%
+      transform: scale(1)
+    100%
+      transform: scale(110%)
+
