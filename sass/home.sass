@@ -12,7 +12,6 @@ body
   z-index: 5000
   display: flex
   animation: closeSpinner .4s ease-in 3s forwards
-  // backdrop-filter: blur(2px)
   background: rgb(147,86,220)
   background: -moz-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%)
   background: -webkit-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%)
@@ -139,6 +138,13 @@ body
     opacity: 0
     visibility: collapse
 
+@keyframes noOverflow
+  0%
+    overflow: hidden
+  100%
+    overflow: auto
+
+// AFTER LOADER
 h1
   font-size: 18px
 
@@ -285,23 +291,34 @@ main
       font-size: 22px
       cursor: pointer
       position: absolute
-      z-index: 5000
-      &:hover
-        background: rgb(147,86,220)
-        background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
-        background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
-        background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
-        background-clip: text
-        -webkit-background-clip: text
-        color: transparent
-        font-weight: 1000
+      z-index: 1000
+      transition: .3s
 
-@keyframes noOverflow
-  0%
-    overflow: hidden
-  100%
-    overflow: auto
+    .fas
+      opacity: .5
+      background: rgb(147,86,220)
+      background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+      background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+      background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
+      background-clip: text
+      -webkit-background-clip: text
+      color: transparent
+      transform: scale(0)
+
+    &:hover .fas
+      opacity: 1
+      transform: scale(1)
+    &:hover .far
+      background: rgb(147,86,220)
+      background: -moz-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+      background: -webkit-linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+      background: linear-gradient(210deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1)
+      background-clip: text
+      -webkit-background-clip: text
+      color: transparent
+
 
 // TABLET
 @media screen and ( min-width: $bp-tablet )and ( max-width: $bp-desktop )
