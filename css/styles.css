@@ -38,6 +38,8 @@ footer div > img {
 footer div:nth-child(2) {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+  margin: auto;
 }
 footer div:nth-child(2) a {
   margin: 5px 0;
