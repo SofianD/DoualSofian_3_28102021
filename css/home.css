@@ -350,6 +350,7 @@ main {
 #display .card {
   border-radius: 15px;
   box-shadow: 0 4px 12px #bdbdbd;
+  position: relative;
 }
 #display .card:nth-child(1) .card-bg {
   background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -386,11 +387,16 @@ main {
 .card-info p:nth-child(1) {
   font-weight: bold;
 }
-.card-info .card-icon {
+
+.floatHeart {
   width: 22px;
   height: 22px;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  z-index: 1000;
 }
-.card-info .card-icon i {
+.floatHeart i {
   color: #5c5c5c;
   font-size: 22px;
   cursor: pointer;
@@ -398,7 +404,7 @@ main {
   z-index: 1000;
   transition: 0.2s ease-out;
 }
-.card-info .card-icon .fas {
+.floatHeart .fas {
   opacity: 0.5;
   background: #9356dc;
   background: -moz-linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
@@ -410,11 +416,11 @@ main {
   color: transparent;
   transform: scale(0);
 }
-.card-info .card-icon:hover .fas {
+.floatHeart:hover .fas {
   opacity: 1;
   transform: scale(1);
 }
-.card-info .card-icon:hover .far {
+.floatHeart:hover .far {
   background: #9356dc;
   background: -moz-linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
   background: -webkit-linear-gradient(210deg, #9356dc 20%, #ff79da 100%);
