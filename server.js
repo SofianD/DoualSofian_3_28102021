@@ -7,15 +7,15 @@ const { join, extname } = require('path');
 const sass = require('sass');
 
 async function compile(targets = undefined) {
-  const files = targets|| await fs.promises.readdir("sass");
+  const files = targets || await fs.promises.readdir("sass");
+
+  await fs.promises.mkdir("css", { recursive: true });
 
   for (const fileName of files) {
     const ext = extname(fileName);
 
     if (ext === ".sass") {
       try {
-        await fs.promises.mkdir("css", { recursive: true });
-
         const compiled = await sass.compileAsync(join("sass", fileName));
 
         const formatedfileName = join("css", fileName.replace(ext, ".css"));
@@ -30,11 +30,22 @@ async function compile(targets = undefined) {
 }
 
 async function serverSASS(request, response) {
-  if (extname(request.url) === ".html" || request.url === "/") {
+  const fileName = request.url.substring(1) || join('.', 'index.html');
+
+  try {
+    await fs.promises.stat(fileName);
+  } catch (error) {
+    response.code = 404;
+    response.end();
+    console.log("END")
+    return;
+  }
+
+  if (extname(fileName) === ".html") {
     await compile();
   }
 
-  fs.createReadStream(request.url.substring(1) || join('.', 'index.html')).pipe(response);
+  fs.createReadStream(fileName).pipe(response);
 
   return;
 }
@@ -45,7 +56,7 @@ function runServer(port = undefined) {
   const defaultPort = 8000;
   server.listen(port || defaultPort);
 
-  console.log(`Server is running ${ port || defaultPort } `);
+  console.log(`Server is running ${ port || defaultPort }`);
 };
 
 function main() {
