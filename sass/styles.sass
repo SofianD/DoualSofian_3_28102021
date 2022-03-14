@@ -45,7 +45,7 @@ footer
   color: white
   background-color: #333333
   padding: $padding
-
+  
   div > img
     height: 20px
     filter: invert(100%)
@@ -54,7 +54,6 @@ footer
     display: flex
     flex-direction: column
     width: fit-content
-    margin: auto
     a
       margin: 5px 0
     
@@ -92,9 +91,13 @@ footer
 @media only screen and ( min-width: $bp-tablet )and ( max-width: $bp-desktop )
   footer
     text-align: center
+    div:nth-child(2)
+      margin: auto
 
 
 // DESKTOP
 @media screen and ( min-width: $bp-desktop )
   footer
     text-align: center
+    div:nth-child(2)
+      margin: auto

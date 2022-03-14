@@ -39,7 +39,6 @@ footer div:nth-child(2) {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  margin: auto;
 }
 footer div:nth-child(2) a {
   margin: 5px 0;
@@ -80,10 +79,16 @@ footer div:nth-child(2) .fa-hands-helping {
   footer {
     text-align: center;
   }
+  footer div:nth-child(2) {
+    margin: auto;
+  }
 }
 @media screen and (min-width: 1100px) {
   footer {
     text-align: center;
+  }
+  footer div:nth-child(2) {
+    margin: auto;
   }
 }
 body {
